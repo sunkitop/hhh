@@ -19,3 +19,9 @@ def signup(request):
     else:       # GET 요청인 경우, 즉 가입하러 막 들어온 경우
         form = UserForm()
     return render(request, 'common/signup.html', {'form': form})
+
+def page_not_found(request, exception):
+    """
+    404 Page not found
+    """
+    return render(request, 'common/404.html', {})
